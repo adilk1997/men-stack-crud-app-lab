@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= food.name %></title>
+</head>
+<body>
+  <a href="/foods">Back to foods</a>
+
+  <h1><%= food.name %></h1>
+
+  <p>
+    <%= food.isReadyToEat
+      ? 'This food is ready to eat!'
+      : 'This food is not ready to eat!' %>
+  </p>
+
+  <form action="/foods/<%= food.id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete <%= food.name %></button>
+  </form>
+
+  <a href="/foods/<%= food.id %>/edit">Edit</a>
+</body>
+</html>
