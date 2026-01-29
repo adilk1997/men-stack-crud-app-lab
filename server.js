@@ -5,6 +5,8 @@ const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 dotenv.config()
 const Food = require('./models/food.js')
+require('dotenv').config()
+
 
 const app = express()
 app.use(express.urlencoded({ extended: false }))

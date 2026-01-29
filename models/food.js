@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 
-const foodSchema = new mongoose.Schema ({
+const foodSchema = new mongoose.Schema({
   name: String,
   description: String,
-  order: Boolean,  
+  isReadyToEat: Boolean,
 })
 
 const Food = mongoose.model('Food', foodSchema)
